@@ -37,7 +37,6 @@ public class Bfs {
         Tree(int vertexs) {
             this.vertexs = vertexs;
             this.branches = new LinkedList[this.vertexs];
-            this.visited = new boolean[vertexs];
             for (int i = 0; i < vertexs; i++) {
                 this.branches[i] = new LinkedList<>();
             }
