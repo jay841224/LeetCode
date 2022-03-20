@@ -1,25 +1,25 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-        va.util.HashSet;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 class Solution {
-
+    public List<List<Integer>> fourSum(int[] nums, int target) {
         Set<List<Integer>> sol = new HashSet<>();
         if (nums == null || nums.length < 4) {
             return new ArrayList(sol);
         }
         int startIndex = 0;
 
-
-               threeSum(nums, startIndex, sol, target);
+        while (startIndex < nums.length - 3) {
+            threeSum(nums, startIndex, sol, target);
             startIndex++;
         }
         return new ArrayList(sol);
     }
 
-    public List<List<Integer>> threeSum(int[] nums, int si, Set<List<Integer>> sol, int target) {
+    lic void threeSum(int[] nums, int si, Set<List<Integer>> sol, int target) {
 
         Arrays.sort(nums);
         for (int i = si + 1; i < nums.length - 2; i++) {
@@ -43,6 +43,5 @@ class Solution {
                 }
             }
         }
-        return new ArrayList<>(sol);
     }
 }
