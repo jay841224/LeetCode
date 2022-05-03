@@ -5,7 +5,7 @@ class Solution {
         }
         if (x == 0 || x == 1 || n == 1) {
             return x;
-        }ß
+        }
         if (n < 0) {
             /**
              * -(n + 1) is done to avoid int overflow.
